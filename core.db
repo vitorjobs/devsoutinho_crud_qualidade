@@ -1,1 +1,23 @@
-Teste 123425
+{
+  "todos": [
+    {
+      "id": "350f32ea-d1be-495b-b211-9029d37616fd",
+      "date": "2023-07-24T22:25:52.042Z",
+      "content": "Primeira TODO",
+      "done": false
+    },
+    {
+      "id": "43af68c9-9376-438a-8aa1-e474475dc1e9",
+      "date": "2023-07-24T22:25:52.043Z",
+      "content": "Segunda TODO",
+      "done": false
+    },
+    {
+      "id": "0b0766b9-c2e1-4a3e-965c-5e0384ee63ab",
+      "date": "2023-07-24T22:25:52.043Z",
+      "content": "Atualizada",
+      "done": false
+    }
+  ],
+  "dogs": []
+}

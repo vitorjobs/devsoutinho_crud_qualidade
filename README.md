@@ -5,11 +5,27 @@
   - Modelo de Novos Projetos
   - Recliclagem de JavaScript | NodeJs
 
+## Tópicos
+  - ``Função CREATE``
+    - valida os tipos de dados utilizando `interface`.
+    - Escreve dentro de um objeto os valores.
+    - Transforma valores via stringfy.
+
+  - ``Função READ``
+    - Lê o conteúdo do arquivo de banco de dados.
+    - Valida se existe conteúdo.
+  
+  - ``Função UPDATE`` 
+    - asf
+    - sdfs
+    - fsdfs
 
 
 ## Bizzus: 
+ 
  # Criar .gitignore completo:
-   - npx gitignote node = Cria arquivo .gitignore completo para projetos node
+   - npx gitignore node
+  
  # Rodar TypeScript :
    - npm install typescrit
    - npx tsc --init: configurações do typescript
