@@ -1,0 +1,21 @@
+{
+  "name": "crud-com-qualidade",
+  "version": "1.0.0",
+  "description": "Reciclagem - Projeto Crud com Qualidade",
+  "main": "index.ts",
+  "scripts": {
+    "start": "npx ts-node ./core/crud.ts",
+    "dev": "nodemon --ext ts,tsx --exec 'npm run start'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.1",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.4"
+  }
+}
