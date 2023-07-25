@@ -3,9 +3,14 @@
 
 ## Objetivo: 
   - Modelo de Novos Projetos
-  - Recliclagem de JavaScript | NodeJs
+  - Recliclagem de JavaScript | NodeJs | REACT
 
-## Tópicos
+
+## Estruturas
+  - BackEnd: `NodeJs`
+  - FrontEnd: `React|Next`
+
+## Tópicos Backend
   - ``Função CREATE``
     - valida os tipos de dados utilizando `interface`.
     - Escreve dentro de um objeto os valores.
@@ -20,6 +25,8 @@
     - sdfs
     - fsdfs
 
+## Tópicos FrontEnd
+  - 
 
 ## Bizzus: 
  
