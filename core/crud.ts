@@ -46,13 +46,13 @@ function read(): Array<Todo> {
 }
 
 
-function update(id: string, partialTodo: Partial<Todo>): Todo{  
+function update(id: string, partialTodo: Partial<Todo>): Todo {
 
     let updateTodo
     const todos = read()
-    todos.forEach((currentTodo) =>{
+    todos.forEach((currentTodo) => {
         const isToUpdate = currentTodo.id === id
-        if(isToUpdate){
+        if (isToUpdate) {
             updateTodo = Object.assign(currentTodo, partialTodo)
         }
     })
@@ -61,7 +61,7 @@ function update(id: string, partialTodo: Partial<Todo>): Todo{
         dogs: [],
     }, null, 2))
 
-    if(!updateTodo){
+    if (!updateTodo) {
         throw new Error("Please privide another ID!")
     }
 
@@ -74,6 +74,23 @@ function updateContentById(id: string, content: string): Todo {
     })
 }
 
+function deleteById(id: string) {
+    const todos = read()
+
+    const todosWithoutOne = todos.filter((todo) => {
+
+        if (id === todo.id) {
+            return false
+        }
+        return true
+    })
+
+    fs.writeFileSync(DB_FILE_PATH, JSON.stringify({
+        todos: todosWithoutOne,
+        dogs: [],
+    }, null, 2))
+}
+
 // LIMPAR BANCO
 function CLEAR_DB() {
     fs.writeFileSync(DB_FILE_PATH, "")
@@ -82,10 +99,14 @@ function CLEAR_DB() {
 // SIMULAR ENTRADA DE DADOS NO CREATE E READ
 CLEAR_DB()
 create("Primeira TODO")
-create("Segunda TODO")
-const terceiraTodo = create("Segunda TODO")
-update(terceiraTodo.id, {
-    content: "Segunda TODO com novo content"
-})
-updateContentById(terceiraTodo.id, "Atualizada")
+const secontTodo = create("Primeira TODO")
+deleteById(secontTodo.id)
+const thirdTodo = create("Segunda TODO")
+// update(thirdTodo.id, {
+//     content: "Segunda TODO com novo content"
+// })
+updateContentById(thirdTodo.id, "Atualizada")
+const todos = read()
 console.log(read())
+console.log(todos)
+console.log(todos.length)
