@@ -37,3 +37,8 @@
    - npm install typescrit
    - npx tsc --init: configurações do typescript
    - npm install -D @types/node
+
+ # Padrões de Código
+  - ESLint
+  - Pritter
+  - EditorConfig: Padrão de espeçamento / tabs / 
