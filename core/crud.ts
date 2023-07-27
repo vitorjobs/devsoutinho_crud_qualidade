@@ -3,9 +3,11 @@ import { v4 as uuid } from "uuid";
 
 const DB_FILE_PATH = "./core.db";
 
+type UUID = string;
+
 // MODELAGEM DE INTERFACE
 interface Todo {
-  id: string;
+  id: UUID;
   content: string;
   date: string;
   done: boolean;
@@ -39,7 +41,7 @@ function create(content: string): Todo {
 
 // LER ENTRADA NO ARQUIVO DE BANCO
 // Salva o content no sistema
-function read(): Array<Todo> {
+export function read(): Array<Todo> {
   const dbString = fs.readFileSync(DB_FILE_PATH, "utf-8");
   const db = JSON.parse(dbString || "{}");
 
@@ -111,17 +113,17 @@ function CLEAR_DB() {
   fs.writeFileSync(DB_FILE_PATH, "");
 }
 
-// SIMULAR ENTRADA DE DADOS NO CREATE E READ
-CLEAR_DB();
-create("Primeira TODO");
-const secontTodo = create("Primeira TODO");
-deleteById(secontTodo.id);
-const thirdTodo = create("Segunda TODO");
-// update(thirdTodo.id, {
-//     content: "Segunda TODO com novo content"
-// })
-updateContentById(thirdTodo.id, "Atualizada");
-const todos = read();
-console.log(read());
-console.log(todos);
-console.log(todos.length);
+// // SIMULAR ENTRADA DE DADOS NO CREATE E READ
+// CLEAR_DB();
+// create("Primeira TODO");
+// const secontTodo = create("Primeira TODO");
+// deleteById(secontTodo.id);
+// const thirdTodo = create("Segunda TODO");
+// // update(thirdTodo.id, {
+// //     content: "Segunda TODO com novo content"
+// // })
+// updateContentById(thirdTodo.id, "Atualizada");
+// const todos = read();
+// console.log(read());
+// console.log(todos);
+// console.log(todos.length);
